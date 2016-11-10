@@ -16,3 +16,9 @@ html{
 	width: 1.5rem;
 	height: 1.5rem;
 }
+
+/*.sudoku td {
+	border: solid 1px;
+	width: 1.5rem;
+	height: 1.5rem;
+}*/
