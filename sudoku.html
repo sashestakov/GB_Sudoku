@@ -1,0 +1,59 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Судоку</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="playGround"></div>
+	<script type="text/javascript">
+		Function.prototype.method = function(name, func){
+			if (this.prototype[name]){
+				this.prototype[name] = func;
+				return this;
+			}
+		}
+		Array.method("fillIncr", function(length, start){
+			start = start || 0;
+			for (var i = 0; i < length; i++) {
+				this.push(i + start);
+			}
+		});
+
+		Element.method("addClass", function(className){
+			var classes = this.className.split(" ");
+			if (classes.indexOf(className) < 0){
+				classes.push(className);
+				this.className = classes.join(" ").trim();
+			}
+		})
+
+		Element.method("removeClass", function(className){
+			var classes = this.className.split(" ");
+			var index = classes.indexOf(className);
+			if (index >= 0){
+				classes.splite(index,1);
+				this.className = classes.join(" ").trim();
+			}
+		})
+		var app={};
+
+		app.Sudoku = function(area){
+			var that = this;
+			var table = document.createElement("table");
+			table.addClass("sudoku");
+			var area = area ||3;
+			var expo = area * area;
+			for (var i=0; i<expo; i++){
+				var row - table.insertRow(-1);
+				for (j=0; j<expo;j++){
+					var cell = row.insertCell(-1);
+					cell.innerHTML = i +';'+j;
+					switch
+				}
+
+			}
+		}
+
+
+</body>
