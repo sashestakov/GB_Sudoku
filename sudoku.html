@@ -7,12 +7,14 @@
 <body>
 	<div id="playGround"></div>
 	<script type="text/javascript">
+		
 		Function.prototype.method = function(name, func){
 			if (this.prototype[name]){
 				this.prototype[name] = func;
 				return this;
 			}
 		}
+
 		Array.method("fillIncr", function(length, start){
 			start = start || 0;
 			for (var i = 0; i < length; i++) {
@@ -36,6 +38,7 @@
 				this.className = classes.join(" ").trim();
 			}
 		})
+		
 		var app={};
 
 		app.Sudoku = function(area){
@@ -49,7 +52,7 @@
 				for (j=0; j<expo;j++){
 					var cell = row.insertCell(-1);
 					cell.innerHTML = i +';'+j;
-					switch
+//					switch
 				}
 
 			}
